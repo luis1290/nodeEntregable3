@@ -7,6 +7,7 @@ const userRoutes = require('./routes/users.routes');
 const todoRoutes = require('./routes/todos.routes');
 const categoryRoutes = require('./routes/categories.routes');
 const subcategoryRoutes = require('./routes/subcategories.routes');
+const cors = require('cors');
 
 initModels();
 
@@ -21,7 +22,7 @@ db.sync()
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json(), cors());
 
 app.get('/', (req, res) => {
   res.send('servidor ok');

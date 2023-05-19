@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 
 const Todos = db.define('todos', {
   title: {
-    type: DataTypes.STRING(30),
+    type: DataTypes.STRING,
     allowNull: false
   },
   description: {
