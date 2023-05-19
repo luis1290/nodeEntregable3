@@ -15,7 +15,7 @@ initModels();
 const PORT = process.env.PORT || 8000;
 
 
-db.sync({ force: true })
+db.sync()
   .then(() => console.log('base de datos sincronizada'))
   .catch(err => console.log(err));
 
